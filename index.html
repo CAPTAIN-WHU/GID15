@@ -1,0 +1,138 @@
+
+<!-- saved from url=(0042)https://x-ytong.github.io/project/GID.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>GID Dataset</title>
+<style id="system" type="text/css">
+    h1,h2,h3,h4,h5,h6,p,blockquote {    margin: 0;    padding: 0;}
+    body {font-family: "Helvetica Neue", Helvetica, "Hiragino Sans GB", Arial, sans-serif; 
+        font-size: 15px; line-height: 20px; color: #737373; margin: 10px 13px 10px 13px;}
+    tr,td {font-size: 15px; color: #737373; text-align: justify; text-justify: inter-character;}
+    ul {text-align: justify; text-justify: inter-character;}
+    a {color: #ff7f50; text-decoration: none;}
+    a:hover {color: #c39797; text-decoration: none;}
+    a img {border: none;}
+    p {margin-bottom: 9px; text-align: justify; text-justify: inter-character;}
+    h1,h2,h3,h4,h5,h6 {color: #20b2aa; line-height: 36px;}
+    h1 {margin-top: 50px; margin-bottom: 18px; font-size: 26px;}
+    h2 {margin-top: 24px; font-size: 20px;}
+    h3 {font-size: 18px;}
+    h4 {font-size: 16px;}
+    h5 {font-size: 14px;}
+    h6 {font-size: 13px;}
+    hr {margin: 0 0 19px; border: 0; border-bottom: 1px solid #ccc;}
+    blockquote {padding: 13px 13px 21px 15px; margin-bottom: 18px; font-family:georgia,serif; font-style: italic;}
+    blockquote:before {content:"C"; font-size:40px; margin-left:-10px; font-family:georgia,serif; color:#eee;}
+    blockquote p {font-size: 14px; font-weight: 300; line-height: 18px; margin-bottom: 0; font-style: italic;}
+    code, pre {font-family: Monaco, Andale Mono, Courier New, monospace;}
+    code {background-color: #fee9cc; color: rgba(0, 0, 0, 0.75); padding: 1px 3px; font-size: 12px; 
+        -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px;}
+    pre {display: block; padding: 14px; margin: 0 0 18px; line-height: 16px; font-size: 11px; 
+        border: 1px solid #d9d9d9; white-space: pre-wrap; word-wrap: break-word;}
+    pre code {background-color: #fff; color:#737373; font-size: 11px; padding: 0;}
+    @media screen and (min-width: 768px) {body {width: 748px; margin:10px auto;}}
+    </style><style id="custom" type="text/css"></style></head>
+
+<body marginheight="0">
+<div align="center"><h1>GID-15: A large scale semantic segmentation dataset for remote sensing images</h1></div>
+    
+<div style="border:2px solid #FFFFFF "></div>
+
+<!--<div align="center">Xin-Yi Tong, Gui-Song Xia, Qikai Lu, Huanfeng Shen, Shengyang Li, Shucheng You, Liangpei Zhang</div>-->
+
+<h2>Abstract</h2>
+<p>In recent years, large amount of high spatial-resolution remote sensing (HRRS) images are available for land-cover mapping. 
+However, due to the complex information brought by the increased spatial resolution and the data disturbances caused by 
+different conditions of image acquisition, it is often difficult to find an efficient method for achieving accurate land-cover 
+classification with high-resolution and heterogeneous remote sensing images.
+	We create a large scale semantic segmentation dataset for remote sensing images containing <b>150 Gaofen-2 satellite images</b>, 100 images, 10 images and 40 images for training, validating and testing respectively.
+<!--	Experiments on multi-source HRRS images, including Gaofen-2, Gaofen-1, Jilin-1, Ziyuan-3, Sentinel-2A, and Google Earth platform data, show encouraging results-->
+<!--and demonstrate the applicability of the proposed scheme to land-cover classification with multi-source HRRS images.-->
+</p>
+
+<h2>Dataset</h2>
+<p>We construct a new large-scale land-cover dataset with Gaofen-2 (GF-2) satellite images. This new dataset, which is named as
+Gaofen Image Dataset with 15 categories (GID-15), has superiorities over the existing land-cover dataset because of its large coverage, wide distribution,
+and high spatial resolution.
+The large-scale remote sensing semantic segmentation set contains 150 pixel-level annotated GF-2 images, which is labeled in 15 categories.
+Some of the images are from the paper: <b>Land-Cover Classification with High-Resolution Remote Sensing Images Using Transferable Deep Models</b>
+</p>
+
+<h2> Data Compose</h2>
+<p>
+We will not release the annotation for testing set, so we can get fair comparative results through online benchmark.
+In addition, we provide two types of ground truth, '.png' and '.tiff' format respectively.
+the '.png' format ground truth is grey label, while '.tiff' format is 'RGB' label, the color palette pls refer to the readme.txt in dataset file.
+<!--	the color palette for convert the two types and CLASSES table are as follows:<br>-->
+
+<!--<br>-->
+<!--CLASSES table : (1:'industrial_land',2:'urban_residential',3:'rural_residential',4:'traffic_land',5:'paddy_field',<br>-->
+<!--    6:'irrigated_land',7:'dry_cropland',8:'garden_plot',9:'arbor_woodland',10:'shrub_land',11:'natural_grassland',<br>-->
+<!--    12:'artificial_grassland',13:'river',14:'lake',15:'pond')<br>-->
+<!--	<br>-->
+<!--	In '.png' format GT, the value of each pixel represents a category as we mentioned in CLASSES table, e.g: the pixel value is 1,so the category of this pixel is 'industrial_land'.-->
+<!--	It should be mentioned that 0 stands for background, which is not included in 15 categories.<br>-->
+<!--<br>-->
+<!--PALETTE:<br>-->
+<!--		  1:[200,    0,    0],<br>-->
+<!--          2:[250,    0, 150],<br>-->
+<!--          3:[200, 150, 150],<br>-->
+<!--          4:[250, 150, 150],<br>-->
+<!--          5:[0,     200,    0],<br>-->
+<!--          6:[150,  250,   0],<br>-->
+<!--          7:[150, 200, 150],<br>-->
+<!--          8:[200,     0, 200],<br>-->
+<!--          9:[150,     0, 250],<br>-->
+<!--          10:[150,  150, 250],<br>-->
+<!--          11:[250,  200,    0],<br>-->
+<!--          12:[200,  200,    0],<br>-->
+<!--          13:[0,         0, 200],<br>-->
+<!--          14:[0,     150, 200],<br>-->
+<!--          15:[0,     200, 250]<br>-->
+
+</p>
+
+<!--<h3>- Large-scale classification set</h3>-->
+<!--	<div align="center"><img src="./GID Dataset_files/GIDlarge.png" width="70%"></div>-->
+
+<h3>- large-scale remote sensing semantic segmentation set</h3>
+	<div align="center"><img src="./GID Dataset_files/GIDfine.png" width="70%"></div>
+
+<!--<h3>- Multi-source validation images</h3>-->
+<!--	<div align="center"><img src="./GID Dataset_files/GIDmulti.png" width="70%"></div>-->
+
+<h3>- Download</h3>
+<p>GID-15 can be download from google drive:</p>
+<p></p><li>Link: <a href="https://www.baidu.com"><b>google drive</b></a></li><p></p>
+<!--<p></p><li>Link: <a href="https://whueducn-my.sharepoint.com/:f:/g/personal/xinyi_tong_whu_edu_cn/EmT3E8xDYaBHklxweG0Je68BGPRWaitir0CuSJaaCjJfDQ?e=87V6PA/"><b>Onedrive (compressed version)</b></a></li><p></p>-->
+<!--<p></p><li>Link: <a href="https://pan.baidu.com/s/1kdMdgXCUWFmlpaKXjFRaaA/"><b>Baidudrive</b></a> (extraction code:5r1z)</li><p></p>-->
+		
+<!--<h2>Experiment</h2>-->
+<!--<p>We test our algorithm and analyse the experimental results in this section. Two types of land-cover classification issues are -->
+<!--examined: 1) transferring deep models to classify HRRS images captured with the same sensor and under different conditions, -->
+<!--2) transferring deep models to classify multi-source HRRS images. For performance comparison, several object-based land-cover -->
+<!--classification methods are utilized.</p>-->
+<!--<h3>- Experiments on Gaofen-2 images</h3>-->
+<!--        <div align="center"><img src="./GID Dataset_files/GIDresultmap5.png" width="80%"></div>-->
+<!--	<div style="border:10px solid #FFFFFF "></div>-->
+<!--	<div align="center"><img src="./GID Dataset_files/GIDresultmap15.png" width="80%"></div>-->
+<!--<h3>- Experiments on multi-source images</h3>-->
+<!--        <div align="center"><img src="./GID Dataset_files/GIDmultiresultmap15.png" width="80%"></div>-->
+	
+<h2>Citation</h2>
+<pre>@article{GID2020,
+title = {Land-Cover Classification with High-Resolution Remote Sensing Images Using Transferable Deep Models},
+author = {Xin-Yi Tong, Gui-Song Xia, Qikai Lu, Huangfeng Shen, Shengyang Li, Shucheng You, Liangpei Zhang},
+journal = {Remote Sensing of Environment, doi: 10.1016/j.rse.2019.111322},
+year = {2020}
+}
+</pre>
+
+<h2>Contact</h2>
+<p>E-mail : gid10195@gmail.com</p>
+
+<div style="border:20px solid #FFFFFF "></div>
+
+
+
+</body></html>
